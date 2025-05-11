@@ -26,8 +26,8 @@ It allows users to browse products, add items to their cart, and proceed to chec
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/brain-rot-shop.git
-   cd brain-rot-shop
+   git clone https://github.com/leonard2005n/Brain-Rot-Shop
+   cd Brain-Rot-Shop
    ```
 
 2. Install dependencies:
