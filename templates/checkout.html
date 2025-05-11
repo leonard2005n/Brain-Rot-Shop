@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Checkout</h1>
+
+{% if cart %}
+<form method="post" action="/checkout">
+  <div class="mb-3">
+    <label for="full_name" class="form-label">Full Name</label>
+    <input type="text" class="form-control" name="full_name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" required>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input type="text" class="form-control" name="phone" required>
+  </div>
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <textarea class="form-control" name="address" rows="3" required></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="payment_method" class="form-label">Payment Method</label>
+    <select class="form-select" name="payment_method" required>
+      <option value="card">Credit/Debit Card</option>
+      <option value="bank_transfer">Bank Transfer</option>
+      <option value="cash">Cash on Delivery</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Order</button>
+</form>
+{% else %}
+<p>Your cart is empty. Please add items before checking out.</p>
+{% endif %}
+
+{% endblock %}
