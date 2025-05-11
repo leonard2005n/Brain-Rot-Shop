@@ -62,6 +62,20 @@ It allows users to browse products, add items to their cart, and proceed to chec
 
 ---
 
+### 🔑 Login
+
+1. Navigate to the login page:  
+   [http://127.0.0.1:5000/login](http://127.0.0.1:5000/login)
+
+2. Use the following credentials to log in:
+   - **Username**: `admin`
+   - **Password**: `password123`
+
+3. Once logged in, you can browse the shop and manage your cart.
+
+4. To log out, click the **Logout** link in the navigation bar.
+
+---
 ## 🧑‍💻 Usage
 
 ### 🛍️ Product Listing

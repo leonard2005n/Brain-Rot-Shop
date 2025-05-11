@@ -5,6 +5,30 @@ from products import products
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Required for session
 
+# Dummy user data for authentication
+users = {
+    "admin": "password123",  # username: password
+}
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        if username in users and users[username] == password:
+            session['user'] = username
+            flash('Login successful!', 'success')
+            return redirect(url_for('index'))
+        else:
+            flash('Invalid username or password', 'danger')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    flash('You have been logged out.', 'info')
+    return redirect(url_for('login'))
+
 @app.route('/')
 def index():
     return render_template('index.html', products=products)

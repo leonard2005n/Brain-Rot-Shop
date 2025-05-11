@@ -1,0 +1,75 @@
+/* General body styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+	line-height: 1.6;
+}
+
+/* Container class for centering content */
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	padding: 20px;
+	background-color: #fff;
+}
+
+/* Header styles */
+header {
+	background: #333;
+	color: #fff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #0779e4 3px solid;
+}
+
+header a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: right;
+}
+
+header li {
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding {
+	float: left;
+}
+
+header #branding h1 {
+	margin: 0;
+}
+
+/* Heading styles */
+h1 {
+	color: #333;
+}
+
+/* Basic button styling */
+.button {
+	display: inline-block;
+	background: #333;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: #0779e4;
+}
